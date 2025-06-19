@@ -8,6 +8,14 @@ This project is based on the structure and design of [Iggy-Tech's Asana Clone](h
 
 ---
 
+## Preview
+
+![Project Preview](public/images/sample1.png)
+
+![Project Preview](public/images/sample2.png)
+
+![Project Preview](public/images/sample3.png)
+
 ## Tech Stack
 
 - [Next.js](https://nextjs.org/)
