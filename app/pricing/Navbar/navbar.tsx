@@ -26,7 +26,7 @@ const Navbar = () => {
   }, []);
 
   const navbarClasses = `
-    flex items-center justify-center space-x-10 bg-white 
+    flex items-center justify-center space-x-10 bg-[#E5E4E2] md:px-10
     sticky top-0 z-50 ${hasScrolled ? "shadow-sm" : ""}
   `;
 

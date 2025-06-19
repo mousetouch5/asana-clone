@@ -1,0 +1,9 @@
+{
+  "/not-found": "app/not-found.js",
+  "/(landing-page)/page": "app/(landing-page)/page.js",
+  "/product/page": "app/product/page.js",
+  "/pricing/page": "app/pricing/page.js",
+  "/sign-in/page": "app/sign-in/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
+}

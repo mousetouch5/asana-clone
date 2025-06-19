@@ -3,7 +3,6 @@
 import * as React from "react";
 import Link from "next/link";
 
-
 import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
@@ -16,7 +15,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import Logo from "./logo";
 
-const components: { title: string;  description: string }[] = [
+const components: { title: string; description: string }[] = [
   {
     title: "Frozen",
 
@@ -48,25 +47,16 @@ const components: { title: string;  description: string }[] = [
   },
   {
     title: "Mint",
- 
+
     description:
       "Nice template for building a blog or a content-heavy website.",
   },
 ];
 
-
-
-
 export function NavigationMenuBar() {
   return (
-    <NavigationMenu
-    
-
-    >
-      <NavigationMenuList
-      className="hidden md:flex md:space-x-4"
-      
-      >
+    <NavigationMenu>
+      <NavigationMenuList className="hidden md:flex md:space-x-4">
         <NavigationMenuItem>
           <NavigationMenuTrigger>Features</NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -80,10 +70,10 @@ export function NavigationMenuBar() {
                     <Logo />
 
                     <div className="mb-2 mt-4 text-lg font-medium">
-                      Bird Software
+                      Task Software
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                      eCommerce for everyone.
+                      Task Management Software to use
                     </p>
                   </a>
                 </NavigationMenuLink>
@@ -94,9 +84,6 @@ export function NavigationMenuBar() {
               <ListItem href="/" title="Demo">
                 How to build a store in 60 seconds with Bird.
               </ListItem>
-              <ListItem href="/" title="Community">
-                Join the community and get help with your project.
-              </ListItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
@@ -105,11 +92,7 @@ export function NavigationMenuBar() {
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-      
-                >
+                <ListItem key={component.title} title={component.title}>
                   {component.description}
                 </ListItem>
               ))}
@@ -121,11 +104,7 @@ export function NavigationMenuBar() {
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-      
-                >
+                <ListItem key={component.title} title={component.title}>
                   {component.description}
                 </ListItem>
               ))}
@@ -139,16 +118,13 @@ export function NavigationMenuBar() {
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
-        <NavigationMenuItem
-
-        
-        >
+        <NavigationMenuItem>
           <Link href="/pricing" legacyBehavior passHref>
-          <div>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Pricing
-            </NavigationMenuLink>
-          </div>
+            <div>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Pricing
+              </NavigationMenuLink>
+            </div>
           </Link>
         </NavigationMenuItem>
       </NavigationMenuList>

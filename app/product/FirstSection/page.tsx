@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { ArrowRight } from "lucide-react";
 
@@ -11,20 +12,28 @@ const FirstSection = () => {
             The #1 software in product and project management
           </div>
           <div className="text-2xl ">
-            Bird connects company-wide goals to the work needed to achieve
+            Clone connects company-wide goals to the work needed to achieve
             them—across teams and functions.
           </div>
 
           <div className="flex space-x-4 ">
             <div className="bg-black p-4 text-white text-xl rounded-md">
-              Get Started
+              <Link href="/sign-up" className="">
+                Get Started
+              </Link>
             </div>
 
             <div className="border p-4 text-xl rounded-md">View Demo</div>
           </div>
         </div>
 
-        <Image src="/images/tab-6.webp" alt="Image" width={700} height={700} className="px-10" />
+        <Image
+          src="/images/tab-6.webp"
+          alt="Image"
+          width={700}
+          height={700}
+          className="px-10 blur-sm"
+        />
       </div>
     </div>
   );

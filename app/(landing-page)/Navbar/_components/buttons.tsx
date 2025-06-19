@@ -60,18 +60,18 @@ const ActionButtons = () => {
             <Globe className="h-6 w-6 text-gray-700" />
           </div>
         </div>
-
         <Link href="/contact" className="">
           Contact Sales
         </Link>
-
-        <Button className="text-md" variant={"ghost"}>
-          Sign In
-        </Button>
-        <Button className="bg-[#000] text-md rounded-sm ">
-          Get Started
-        </Button>
-
+        // @ts-expect-error
+        <Link href="/sign-in">
+          <Button className="text-md" variant={"ghost"}>
+            Sign In
+          </Button>
+        </Link>
+        <Link href="/sign-up" className="">
+          <Button className="bg-[#000] text-md rounded-sm ">Get Started</Button>
+        </Link>
         <div></div>
       </div>
     </div>

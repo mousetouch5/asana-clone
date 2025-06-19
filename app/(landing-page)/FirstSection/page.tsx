@@ -23,7 +23,7 @@ const FirstSection = () => {
         
         "
         >
-          The best platform for cross-functional work
+          Cross-functional driven application for productvity
         </div>
 
         <p
@@ -33,15 +33,15 @@ const FirstSection = () => {
         
         "
         >
-          Want more efficiency in your organization? Bird is easy for all teams
+          Want more efficiency in your organization? Clone is easy for all teams
           to use, so you can deliver quality work, faster.
         </p>
         <div className="flex gap-4 justify-center">
           <button className="bg-[#000] text-white px-6 py-3 rounded-sm ">
             Get Started
           </button>
-          <Link href="/Contact">
-            <button className="bg-gray-500 text-white px-6 py-3 rounded-sm">
+          <Link href="">
+            <button className="bg-gray-500 text-white px-6 py-3 rounded-sm opacity-50 cursor-not-allowed pointer-events-none">
               See how it works
             </button>
           </Link>
@@ -49,50 +49,63 @@ const FirstSection = () => {
       </div>
 
       <div className=" md:pt-10 items-center space-y-10   md:flex  justify-center md:mx-auto md:space-x-10">
-        <motion.div 
-        initial={{ y: 100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          className="px-10 md:px-0 relative w-[500] h-[500]"
+        >
+          <Image
+            src="/images/tab-1.webp"
+            alt="Picture of the author"
+            width={500}
+            height={500}
+            className="blur-sm"
+          />
 
-
-        
-        className="px-10 md:px-0">
-      <Image
-        src="/images/tab-1.webp"
-        alt="Picture of the author"
-        width={500}
-        height={500}
-      />
-
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="bg-[#000] bg-opacity-70 text-white px-6 py-3 rounded-sm">
+              Coming Soon
+            </span>
+          </div>
         </motion.div>
 
-        <motion.div 
-        initial={{ y: 100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        
-  
-        className="px-10 md:px-0">
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          className="px-10 md:px-0 relative w-[500] h-[500]"
+        >
           <Image
             src="/images/tab-2.webp"
             alt="Picture of the author"
             width={500}
             height={500}
+            className="blur-sm"
           />
 
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="bg-[#000] bg-opacity-70 text-white px-6 py-3 rounded-sm">
+              Coming Soon
+            </span>
+          </div>
         </motion.div>
 
-        <motion.div 
-        initial={{ y: 100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-
-        
-        
-        className="px-10 md:px-0  ">
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          className="px-10 md:px-0 relative w-[500] h-[500] "
+        >
           <Image
             src="/images/tab-3.webp"
             alt="Picture of the author"
             width={500}
             height={500}
+            className="blur-sm"
           />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="bg-[#000] bg-opacity-70 text-white px-6 py-3 rounded-sm">
+              Coming Soon
+            </span>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import FirstSection from "./FirstSection/page";
 import Navbar from "./Navbar/navbar";
@@ -6,14 +6,13 @@ import SecondSection from "./SecondSection/page";
 import Footer from "./footer/page";
 
 const PricingPage = () => {
-    return ( 
+  return (
     <div>
-       <Navbar/>
-       <FirstSection/>
-       <SecondSection/>
-       <Footer/>
+      <Navbar />
+      <FirstSection />
+      <Footer />
+    </div>
+  );
+};
 
-    </div> );
-}
- 
 export default PricingPage;
