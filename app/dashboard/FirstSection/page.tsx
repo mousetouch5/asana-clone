@@ -1,12 +1,30 @@
 "use client";
+
 import { useState } from "react";
-import Sidebar from "./components/Sidebar";
+import {
+  SidebarProvider,
+  SidebarInset,
+  SidebarTrigger,
+} from "@/components/ui/sidebar";
 import Topbar from "./components/Topbar";
+import { AppSidebar } from "./components/app-sidebar";
+
+import { TrendingUp, TrendingDown } from "lucide-react";
+import { Search } from "lucide-react";
+
 import { QuickActions } from "./components/QuickActions"; // Import QuickActions
 import { StatsGrid } from "./components/StatCard"; // Import StatsGrid
 import { RecentActivity } from "./components/RecentActivity"; // Import RecentActivity
-import { TrendingUp, TrendingDown } from "lucide-react";
-// Define some mock activity data (replace with dynamic data as needed)
+interface Task {
+  id: string;
+  title: string;
+  description: string;
+  completed: boolean;
+  priority: string;
+  project: string;
+  dueDate: string;
+}
+
 const activityData = [
   {
     id: 1,
@@ -65,13 +83,14 @@ const statsData = [
   },
 ];
 
-export default function DashboardPage() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
+export default function Dashboard() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />
-      <div className="lg:pl-64">
+    <SidebarProvider>
+      <AppSidebar />
+      <SidebarInset>
+        <SidebarTrigger className="-ml-1" />
+        <Topbar />
+        {/*
         <Topbar toggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
         {/* Insert QuickActions component */}
         <QuickActions />
@@ -81,7 +100,7 @@ export default function DashboardPage() {
 
         {/* Insert RecentActivity component and pass the activity data */}
         <RecentActivity items={activityData} />
-      </div>
-    </div>
+      </SidebarInset>
+    </SidebarProvider>
   );
 }

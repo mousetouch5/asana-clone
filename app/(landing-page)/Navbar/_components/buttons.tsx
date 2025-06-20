@@ -63,7 +63,7 @@ const ActionButtons = () => {
         <Link href="/contact" className="">
           Contact Sales
         </Link>
-        // @ts-expect-error
+
         <Link href="/sign-in">
           <Button className="text-md" variant={"ghost"}>
             Sign In

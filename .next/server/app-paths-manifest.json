@@ -1,6 +1,7 @@
 {
   "/(landing-page)/page": "app/(landing-page)/page.js",
   "/sign-in/page": "app/sign-in/page.js",
-  "/product/page": "app/product/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/sign-up/page": "app/sign-up/page.js",
+  "/dashboard-task/page": "app/dashboard-task/page.js",
+  "/dashboard/page": "app/dashboard/page.js"
 }

@@ -16,10 +16,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/sign-in/page.js"
     ],
-    "/product/page": [
+    "/sign-up/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/product/page.js"
+      "static/chunks/app/sign-up/page.js"
+    ],
+    "/dashboard-task/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard-task/page.js"
+    ],
+    "/dashboard/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/page.js"
     ]
   }
 }
