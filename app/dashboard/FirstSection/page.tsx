@@ -1,29 +1,17 @@
 "use client";
 
-import { useState } from "react";
 import {
   SidebarProvider,
   SidebarInset,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
-import Topbar from "./components/Topbar";
 import { AppSidebar } from "./components/app-sidebar";
 
 import { TrendingUp, TrendingDown } from "lucide-react";
-import { Search } from "lucide-react";
 
-import { QuickActions } from "./components/QuickActions"; // Import QuickActions
-import { StatsGrid } from "./components/StatCard"; // Import StatsGrid
-import { RecentActivity } from "./components/RecentActivity"; // Import RecentActivity
-interface Task {
-  id: string;
-  title: string;
-  description: string;
-  completed: boolean;
-  priority: string;
-  project: string;
-  dueDate: string;
-}
+import { QuickActions } from "./components/QuickActions";
+import { StatsGrid } from "./components/StatCard";
+import { RecentActivity } from "./components/RecentActivity";
 
 const activityData = [
   {
@@ -57,28 +45,28 @@ const statsData = [
     title: "Users",
     value: "1,200",
     change: "+5%",
-    changeType: "increase",
-    icon: TrendingUp, // Example icon
+    changeType: "increase" as const,
+    icon: TrendingUp,
   },
   {
     title: "Sales",
     value: "$34,000",
     change: "-2%",
-    changeType: "decrease",
+    changeType: "decrease" as const,
     icon: TrendingDown,
   },
   {
     title: "Revenue",
     value: "$9,500",
     change: "+12%",
-    changeType: "increase",
+    changeType: "increase" as const,
     icon: TrendingUp,
   },
   {
     title: "Bounce Rate",
     value: "45%",
     change: "-3%",
-    changeType: "decrease",
+    changeType: "decrease" as const,
     icon: TrendingDown,
   },
 ];
@@ -88,18 +76,14 @@ export default function Dashboard() {
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        <SidebarTrigger className="-ml-1" />
-        <Topbar />
-        {/*
-        <Topbar toggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
-        {/* Insert QuickActions component */}
-        <QuickActions />
-
-        {/* Insert StatsGrid component and pass the stats data */}
-        <StatsGrid stats={statsData} />
-
-        {/* Insert RecentActivity component and pass the activity data */}
-        <RecentActivity items={activityData} />
+        <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
+          <SidebarTrigger className="-ml-1" />
+        </header>
+        <main className="flex flex-1 flex-col gap-4 p-4">
+          <QuickActions />
+          <StatsGrid stats={statsData} />
+          <RecentActivity items={activityData} />
+        </main>
       </SidebarInset>
     </SidebarProvider>
   );
