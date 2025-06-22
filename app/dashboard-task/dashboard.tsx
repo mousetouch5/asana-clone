@@ -6,9 +6,9 @@ import {
   SidebarInset,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
-import { AppSidebar } from "./components/app-sidebar";
-import { TaskForm } from "./components/task-form";
-import { TaskItem } from "./components/task-item";
+import { AppSidebar } from "../components/app-sidebar";
+import { TaskForm } from "../components/task-form";
+import { TaskItem } from "../components/task-item";
 import { Input } from "@/components/ui/input";
 import {
   Select,

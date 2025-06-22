@@ -6,6 +6,7 @@ import PasswordField from "./PasswordField";
 import RememberMe from "./RememberMe";
 import FormError from "./FormError";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 interface FormData {
   email: string;
@@ -20,6 +21,7 @@ interface FormErrors {
 }
 
 export default function SignInForm() {
+  const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     email: "",
     password: "",
@@ -56,6 +58,7 @@ export default function SignInForm() {
         setTimeout(() => (Math.random() > 0.3 ? res(true) : rej()), 2000)
       );
       console.log("Signed in:", formData);
+      router.push("/homepage");
     } catch {
       setErrors({ general: "Invalid email or password." });
     } finally {
