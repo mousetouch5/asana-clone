@@ -1,8 +1,1 @@
-{
-  "/projects/page": "app/projects/page.js",
-  "/teams/page": "app/teams/page.js",
-  "/homepage/page": "app/homepage/page.js",
-  "/(landing-page)/page": "app/(landing-page)/page.js",
-  "/sign-in/page": "app/sign-in/page.js",
-  "/dashboard-task/page": "app/dashboard-task/page.js"
-}
+{}
